@@ -1478,6 +1478,14 @@ public:
 
 			nvgBeginFrame(m_nvg, float(m_width), float(m_height), 1.0f);
 
+			for (int j=0; j<10000; ++j)
+			{
+				nvgBeginPath(m_nvg);
+				nvgMoveTo(m_nvg, 10.0F, 10.0F);
+				nvgLineTo(m_nvg, 210.0F, 10.0F);
+				nvgStroke(m_nvg);
+			}
+
 			renderDemo(m_nvg, float(m_mouseState.m_mx), float(m_mouseState.m_my), float(m_width), float(m_height), time, 0, &m_data);
 
 			nvgEndFrame(m_nvg);
